@@ -39,4 +39,12 @@ for the rejectfont syntax
 <rejectfont><pattern><patelt name="family"><string>gregorio</string></patelt></pattern></rejectfont>
 ```
 
+## References
+
+* https://www.x.org/releases/X11R7.6/doc/xorg-docs/fonts/fonts.html
+* https://www.freedesktop.org/wiki/Software/fontconfig/
+* https://askubuntu.com/a/916284
+* https://bugreports.qt.io/browse/QTBUG-60561
+* https://wiki.archlinux.org/index.php/Font_configuration/Examples
+* https://wiki.archlinux.org/index.php/Font_configuration
 

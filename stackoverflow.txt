@@ -1,0 +1,30 @@
+I recently figured out how to use `fontconfig` on Linux to set system default fonts for serif, sans-serif and monospaced fonts;  basically, you save an XML configuration file to `~/.config/fontconfig/fonts.conf` with the following content:
+
+    <?xml version="1.0"?>
+    <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+    <fontconfig>
+
+    <match>
+      <test qual="any" name="family"><string>serif</string></test>
+      <edit name="family" binding="strong" mode="prepend_first">
+        <string>Gentium</string>
+        <string>Sun-ExtA</string>
+        <string>HanaMinA</string>
+        <string>HanaMinB</string>
+        </edit>
+      </match>
+
+    </fontconfig>
+
+The `binding="strong" mode="prepend_first"` attributes ensure that the matching rules take precedence over other settings, and the sequence of font names ensure that where a font doesn't contain a given code point / character, the next font in the list is tried (this list applies top-to-bottom; IMHO it should really be a later-binds-stronger logic, but whatever).
+
+The great thing about this configuration is that it works in text editors and terminal emulators alike.
+
+However, there's still a nag: there are many cases where a given font does contain a given glyph, but another font would be preferrable for that codepoint; for example, `Sun-ExtA` is a great default font for CJK characters, but it also covers lots and lots of non-CJK characters and has a few problematic glyphs.
+
+Suppose I don't like the appearance of `〇 U+3007 IDEOGRAPHIC NUMBER ZERO` in `Sun-ExtA` and would rather use `HanaMinA` for it, how could I do that with `fontconfig`? Obviously I can't just prioritize the entry for `HanaMinA` over `Sun-ExtA`, as that would affect *all* of the glyphs that are contained in both fonts.
+
+My hunch is that there *should* be a solution involving elements `<charset>` (according to the
+[fontconfig user documentation](https://www.freedesktop.org/software/fontconfig/fontconfig-user.html), "This element holds at least one <int> element of an Unicode code point or more") and/or `<range>` ("This element holds the two <int> elements of a range representation"—presumably to denote a range of Unicode code points). I couldn't find a single example how to use these elements, though.
+
+**Is it possible to configure fontconfig to use a specific font for a single Unicode code point or a range of codepoints?**
