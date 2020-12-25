@@ -2,6 +2,140 @@
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
 
+<!-- ################################################################################################### -->
+<!-- ################################################################################################### -->
+<!-- ################################################################################################### -->
+<!-- ################################################################################################### -->
+<!-- ################################################################################################### -->
+<!-- ################################################################################################### -->
+
+<!-- backup: -->
+
+<match>
+  <test qual="any" name="family"><string>serif</string></test>
+  <edit binding="strong" name="family" mode="prepend_first">
+    <string>Liberation Serif</string>
+    <string>Noto Naskh Arabic</string>
+    <string>Gentium</string>
+    <!-- <string>Amiri</string> -->
+    <!-- <string>TH-Khaai-TP0</string> -->
+    <!-- <string>TH-Khaai-TP2</string> -->
+    <string>Sun-ExtA</string>
+    <string>sunflower-u-cjk-xb</string>
+    <string>jizura3b</string>
+    <string>HanaMinA</string>
+    <string>HanaMinB</string>
+    </edit>
+  </match>
+
+
+<match>
+  <test qual="any" name="family"><string>sans-serif</string></test>
+  <edit binding="strong" name="family" mode="prepend_first">
+    <!-- <string>Noto Sans</string> -->
+    <!-- <string>Noto Naskh Arabic</string> -->
+    <!-- <string>Sun-ExtA</string> -->
+    <!-- <string>sunflower-u-cjk-xb</string> -->
+    <string>jizura3b</string>
+    <!-- <string>HanaMinA</string> -->
+    <!-- <string>HanaMinB</string> -->
+    </edit>
+  </match>
+
+
+<!-- thx to https://unix.stackexchange.com/a/106170 -->
+<match target="pattern">
+  <test name="family" qual="any"><string>monospace</string></test>
+  <edit binding="strong" mode="prepend" name="family">
+    <!-- <string>Droid Sans Mono</string> -->
+    <!-- <string>Fira Code</string> -->
+    <string>Iosevka Slab</string>
+    <string>Noto Naskh Arabic</string>
+    <!-- <string>Amiri</string> -->
+    <!-- <string>Aegyptus</string> -->
+    <!-- <string>Source Code Pro</string> -->
+    <!-- <string>TH-Khaai-TP0</string> -->
+    <!-- <string>TH-Khaai-TP2</string> -->
+    <string>Sun-ExtA</string>
+    <string>sunflower-u-cjk-xb</string>
+    <string>jizura3b</string>
+    <string>HanaMinA</string>
+    <string>HanaMinB</string>
+    <!-- <string>LastResort</string> -->
+    </edit>
+  </match>
+
+
+<!-- ################################################################################################### -->
+<!-- ################################################################################################### -->
+<!-- ################################################################################################### -->
+<!-- ################################################################################################### -->
+<!-- ################################################################################################### -->
+<!-- ################################################################################################### -->
+
+
+
+
+<!-- thx to https://unix.stackexchange.com/a/106170 -->
+<match target="pattern">
+  <test name="family" qual="any"><string>monospace</string></test>
+  <edit binding="strong" mode="prepend" name="family">
+    <!-- <string>Droid Sans Mono</string> -->
+    <!-- <string>Fira Code</string> -->
+    <string>Iosevka Slab</string>
+    <string>Noto Naskh Arabic</string>
+    <!-- <string>Amiri</string> -->
+    <!-- <string>Aegyptus</string> -->
+    <!-- <string>Source Code Pro</string> -->
+    <!-- <string>TH-Khaai-TP0</string> -->
+    <!-- <string>TH-Khaai-TP2</string> -->
+    <string>Sun-ExtA</string>
+    <string>sunflower-u-cjk-xb</string>
+    <string>jizura3b</string>
+    <string>HanaMinA</string>
+    <string>HanaMinB</string>
+    <!-- <string>LastResort</string> -->
+    </edit>
+  </match>
+
+
+<match>
+  <test qual="any" name="family"><string>serif</string></test>
+  <edit binding="strong" name="family" mode="prepend_first">
+    <string>Liberation Serif</string>
+    <string>Noto Naskh Arabic</string>
+    <string>Gentium</string>
+    <!-- <string>Amiri</string> -->
+    <!-- <string>TH-Khaai-TP0</string> -->
+    <!-- <string>TH-Khaai-TP2</string> -->
+    <string>Sun-ExtA</string>
+    <string>sunflower-u-cjk-xb</string>
+    <string>jizura3b</string>
+    <string>HanaMinA</string>
+    <string>HanaMinB</string>
+    </edit>
+  </match>
+
+<match>
+  <test qual="any" name="family"><string>sans-serif</string></test>
+  <edit binding="strong" name="family" mode="prepend_first">
+    <!-- <string>Roboto</string> -->
+    <string>Liberation Sans</string>
+    <string>Noto Naskh Arabic</string>
+    <!-- <string>Noto Sans</string> -->
+    <!-- <string>ALM Fixed</string> -->
+    <string>Sun-ExtA</string>
+    <string>sunflower-u-cjk-xb</string>
+    <string>jizura3b</string>
+    <string>HanaMinA</string>
+    <string>HanaMinB</string>
+    <!-- <string>DejaVu Sans</string> -->
+    <!-- <string>TH-Khaai-TP0</string> -->
+    <!-- <string>TH-Khaai-TP2</string> -->
+    </edit>
+  </match>
+
+
 <!--
 
 See
